@@ -1,0 +1,26 @@
+
+<div class="card">
+    <p-table [value]="allTableData" styleClass="p-datatable-gridlines" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>description</th>
+                <th>Action</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{product.title}}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.description }}</td>
+                <td><button pButton icon="pi pi-pencil" label="view" (click)="onClickView(product)"> <i class="pi pi-pencil"></i></button></td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+
